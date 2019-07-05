@@ -8,8 +8,13 @@
 <body>
      <!-- Formulário -->
      <form action="{% url 'count' %}">
-     	<textarea cols="20" rows="1" name="fulltext"></textarea>
+     	<h4>Vamos contar quantas palavras aparecem no texto que você copiou?</h4>
+     	<textarea cols="40" rows="4" name="fulltext"></textarea>
      	<br />
      	<input type="submit" value="Count!" name="button"/>
+     </form>
+     	<form action="{% url 'about' %}">
+     	<input type="submit" value="Sobre" name="about"/>
+     </form>
 </body>
 </html>

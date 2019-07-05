@@ -7,6 +7,15 @@
 </head>
 <body>
      <!-- Formulário -->
-     <h1>Count!</h1>
+     <h1>Há {{ count }} palavra(s) em seu texto!</h1>
+     <h3>Texto todo: </h3>
+     {{ fulltext }}
+     <br />
+     <a href="{% url 'home' %}">Testar de novo</a>
+     <h2>A palavra que mais aparece é: </h2>
+     {% for word, counttotal in sortedwords  %}
+     {{ word }} - {{ counttotal }}
+     <br />
+     {% endfor %}
 </body>
 </html>
